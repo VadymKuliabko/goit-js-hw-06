@@ -9,5 +9,6 @@ itemsListEl.forEach((element) => {
   const title = element.querySelector("h2").innerHTML;
   const itemsLength = element.querySelectorAll("li").length;
 
-  console.log(`category: ${title} / elements : ${itemsLength}`);
+  console.log(`category: ${title}`);
+  console.log(`elements: ${itemsLength}`);
 });
