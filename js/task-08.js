@@ -11,9 +11,14 @@ const onSubmitForm = (event) => {
     return alert(message);
   }
 
-  console.log(
-    `${email.name}: ${email.value}, ${password.name}: ${password.value}`
-  );
+ const result = {};
+  const formData = new FormData(event.currentTarget);
+
+  formData.forEach((value, name) => {
+    result[name] = value;
+  });
+
+  console.log(result);
   event.currentTarget.reset();
 };
 
