@@ -1,4 +1,5 @@
 const formEl = document.querySelector(".login-form");
+const message = "Заполните пожалуйста все поля";
 
 const onSubmitForm = (event) => {
   event.preventDefault();
@@ -7,10 +8,12 @@ const onSubmitForm = (event) => {
   } = event.currentTarget;
 
   if (email.value === "" || password.value === "") {
-    return alert("Заполните пожалуйста все поля");
+    return alert(message);
   }
 
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
+  console.log(
+    `${email.name}: ${email.value}, ${password.name}: ${password.value}`
+  );
   event.currentTarget.reset();
 };
 
